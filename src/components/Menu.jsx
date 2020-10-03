@@ -1,48 +1,32 @@
 import React from 'react';
-import { emphasize, withStyles } from '@material-ui/core/styles';
-import Breadcrumbs from '@material-ui/core/Breadcrumbs';
-import Chip from '@material-ui/core/Chip';
-import HomeIcon from '@material-ui/icons/Home';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+// import Button from '@material-ui/core/Button';
+// import Tooltip from '@material-ui/core/Tooltip';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import FacebookIcon from '@material-ui/icons/Facebook';
 
-const StyledBreadcrumb = withStyles((theme) => ({
+const useStyles = makeStyles({
   root: {
-    backgroundColor: theme.palette.grey[100],
-    height: theme.spacing(3),
-    color: theme.palette.grey[800],
-    fontWeight: theme.typography.fontWeightRegular,
-    '&:hover, &:focus': {
-      backgroundColor: theme.palette.grey[300],
-    },
-    '&:active': {
-      boxShadow: theme.shadows[1],
-      backgroundColor: emphasize(theme.palette.grey[300], 0.12),
-    },
+    width: 200,
+/*     paddingLeft: 400,
+    paddingRight: 0 */
   },
-}))(Chip); // TypeScript only: need a type cast here because https://github.com/Microsoft/TypeScript/issues/26591
+});
 
-function handleClick(event) {
-  event.preventDefault();
-  console.info('You clicked a breadcrumb.');
-}
+export default function PositionedTooltips() {
+  const classes = useStyles();
 
-export default function CustomizedBreadcrumbs() {
   return (
-    <Breadcrumbs aria-label="breadcrumb">
-      <StyledBreadcrumb
-        component="a"
-        href="#"
-        label="Home"
-        icon={<HomeIcon fontSize="small" />}
-        onClick={handleClick}
-      />
-      <StyledBreadcrumb component="a" href="#" label="Catalog" onClick={handleClick} />
-      <StyledBreadcrumb
-        label="Accessories"
-        deleteIcon={<ExpandMoreIcon />}
-        onClick={handleClick}
-        onDelete={handleClick}
-      />
-    </Breadcrumbs>
+    <div className={classes.root}>
+      <Grid container spacing={3}>
+        <Grid item align="right">
+          <InstagramIcon />
+            <LinkedInIcon />
+            <FacebookIcon />
+        </Grid>
+      </Grid>
+    </div>
   );
 }

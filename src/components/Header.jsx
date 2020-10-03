@@ -3,7 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 // import Avatar from '@material-ui/core/Avatar';
 import Container from '@material-ui/core/Container';
-// import Menu from '../components/Menu';
+import Menu from '../components/Menu';
 import Grid from '@material-ui/core/Grid';
 // import Paper from '@material-ui/core/Paper';
 
@@ -57,12 +57,15 @@ export default function Header() {
 
     return (
         <div className={classes.heroContent}>
-        {/* <Menu /> */}
+        <Grid item xs={12} align="right">   
+        <Menu />
+        </Grid>
         <Container maxWidth="md">
+
         <Grid container spacing={3}>
         <Grid item xs={12} md={7}>
         <Typography variant="h3" align="left" className={classes.title} gutterBottom>
-           Dear Ms' and Mr' HRD
+           I'm Achmad Syafri
          </Typography>
         <Typography variant="h6" align="left" className={classes.description}>
                     Hello i'm a <b>DATA ANALYSIS</b> and <b>WEB DEVELOPER</b> from <b>MAKASSAR</b>, Indonesia.
