@@ -23,15 +23,27 @@ export default function Resume() {
     const work = [
         {
             id: 1,
-            title: 'Dattel Sdn Bhd',
-            description: 'Software Engineer',
-            year: '2019 - 2020'
+            title: 'STO Telkom Balaikota Makassar Regional 7',
+            description: 'Home Servic',
+            year: 'May 2018 - August 2020'
         },
         {
             id: 2,
-            title: 'Dattel Sdn Bhd',
-            description: 'Software Engineer',
-            year: '2019 - 2020'
+            title: 'STT Telkom',
+            description: 'Server Room & Lab',
+            year: 'June 2013 - August 2013'
+        },
+        {
+            id: 3,
+            title: 'Telkom Lembong Bandung',
+            description: 'Fiber Optic &  Quality Assurance',
+            year: 'May 2013 - June 2013'
+        },
+        {
+            id: 4,
+            title: 'Telkom Divre Makassar',
+            description: 'Observation',
+            year: '2 Weeks'
         }
     ]
 

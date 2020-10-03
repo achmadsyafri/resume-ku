@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
         background: '#e3e6e8',
         //backgroundImage: "url(" + "https://d5qmjlya0ygtg.cloudfront.net/402/087/293/-449996995-1srj5la-bt8liti4hptpp00/original/avatar.jpg" + ")",
         //backgroundPosition: 'center',
-        padding: theme.spacing(11, 0, 7),
+        padding: theme.spacing(1, 0, 7),
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'auto',
         minHeight: '650px',
